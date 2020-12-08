@@ -23,7 +23,7 @@ setInterval(function(){
     // please write your code here
     
     const timeDiff = new Date().getTime() - user.lastActivity;
-    let timeDiffMinutes = Math.round( timeDiff /1000/60);
+    let timeDiffMinutes = Math.floor( timeDiff /1000/60);
     
     timeDiffMinutes = timeDiffMinutes % 5
     

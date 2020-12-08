@@ -21,5 +21,21 @@ const inactiveThirdStage = () => {
 // this is the main method that acts like a worker and runs every 1 minute
 setInterval(function(){
     // please write your code here
-    //intial commit
+    
+    const timeDiff = new Date().getTime() - user.lastActivity;
+    let timeDiffMinutes = Math.round( timeDiff /1000/60);
+    
+    timeDiffMinutes = timeDiffMinutes % 5
+    
+    if (timeDiffMinutes == 1){
+
+        inactiveFirstStage()
+
+    } else if ( timeDiffMinutes == 2 ) {
+
+        inactiveSecondStage()
+
+    } else if(timeDiffMinutes == 4 || timeDiffMinutes == 5){
+        inactiveThirdStage()
+    }
 }, 1000);

@@ -21,4 +21,5 @@ const inactiveThirdStage = () => {
 // this is the main method that acts like a worker and runs every 1 minute
 setInterval(function(){
     // please write your code here
+    //intial commit
 }, 1000);
